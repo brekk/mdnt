@@ -1,0 +1,21 @@
+.Base {
+  padding: 0.5rem;
+  margin: 0.25rem;
+  width: calc(100% - 2rem);
+  &__template {
+    border-top: 1px dashed blue;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+  }
+  &__template-title {
+  }
+  &__template-body {
+    width: calc(100% - 1rem);
+    padding: 0.5rem;
+    margin: 0;
+    border: none;
+    outline: 1px dashed blue;
+    display: flex;
+    min-height: 4rem;
+  }
+}
