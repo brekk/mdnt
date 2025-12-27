@@ -30,11 +30,18 @@ const RAW_RUNTIME_STATE =
           ["@eslint/js", "npm:9.39.2"],\
           ["@stylistic/eslint-plugin", "virtual:951eef86dac0e95708dda18a354c5b2810f848987c4f7452a61c72728fdc0fed385ff3cf6bdf9bcab9a47fcb271bc487736a0e7de1f6d275c6e872a9e758cb86#npm:5.6.1"],\
           ["@stylistic/eslint-plugin-js", "virtual:951eef86dac0e95708dda18a354c5b2810f848987c4f7452a61c72728fdc0fed385ff3cf6bdf9bcab9a47fcb271bc487736a0e7de1f6d275c6e872a9e758cb86#npm:4.4.1"],\
+          ["@types/ramda", "npm:0.31.1"],\
           ["astro", "npm:5.16.6"],\
           ["blem", "npm:0.0.9"],\
           ["eslint", "virtual:951eef86dac0e95708dda18a354c5b2810f848987c4f7452a61c72728fdc0fed385ff3cf6bdf9bcab9a47fcb271bc487736a0e7de1f6d275c6e872a9e758cb86#npm:9.39.2"],\
           ["eslint-plugin-astro", "virtual:951eef86dac0e95708dda18a354c5b2810f848987c4f7452a61c72728fdc0fed385ff3cf6bdf9bcab9a47fcb271bc487736a0e7de1f6d275c6e872a9e758cb86#npm:1.5.0"],\
-          ["sass-embedded", "npm:1.97.1"]\
+          ["globals", "npm:16.5.0"],\
+          ["prettier", "npm:3.7.4"],\
+          ["prettier-plugin-astro", "npm:0.14.1"],\
+          ["ramd", "npm:1.0.1"],\
+          ["ramda", "npm:0.32.0"],\
+          ["sass-embedded", "npm:1.97.1"],\
+          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -1499,6 +1506,16 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/node", "npm:25.0.3"],\
           ["undici-types", "npm:7.16.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/ramda", [\
+      ["npm:0.31.1", {\
+        "packageLocation": "../../.yarn/berry/cache/@types-ramda-npm-0.31.1-a5c735bd61-10c0.zip/node_modules/@types/ramda/",\
+        "packageDependencies": [\
+          ["@types/ramda", "npm:0.31.1"],\
+          ["types-ramda", "npm:0.31.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3815,11 +3832,18 @@ const RAW_RUNTIME_STATE =
           ["@eslint/js", "npm:9.39.2"],\
           ["@stylistic/eslint-plugin", "virtual:951eef86dac0e95708dda18a354c5b2810f848987c4f7452a61c72728fdc0fed385ff3cf6bdf9bcab9a47fcb271bc487736a0e7de1f6d275c6e872a9e758cb86#npm:5.6.1"],\
           ["@stylistic/eslint-plugin-js", "virtual:951eef86dac0e95708dda18a354c5b2810f848987c4f7452a61c72728fdc0fed385ff3cf6bdf9bcab9a47fcb271bc487736a0e7de1f6d275c6e872a9e758cb86#npm:4.4.1"],\
+          ["@types/ramda", "npm:0.31.1"],\
           ["astro", "npm:5.16.6"],\
           ["blem", "npm:0.0.9"],\
           ["eslint", "virtual:951eef86dac0e95708dda18a354c5b2810f848987c4f7452a61c72728fdc0fed385ff3cf6bdf9bcab9a47fcb271bc487736a0e7de1f6d275c6e872a9e758cb86#npm:9.39.2"],\
           ["eslint-plugin-astro", "virtual:951eef86dac0e95708dda18a354c5b2810f848987c4f7452a61c72728fdc0fed385ff3cf6bdf9bcab9a47fcb271bc487736a0e7de1f6d275c6e872a9e758cb86#npm:1.5.0"],\
-          ["sass-embedded", "npm:1.97.1"]\
+          ["globals", "npm:16.5.0"],\
+          ["prettier", "npm:3.7.4"],\
+          ["prettier-plugin-astro", "npm:0.14.1"],\
+          ["ramd", "npm:1.0.1"],\
+          ["ramda", "npm:0.32.0"],\
+          ["sass-embedded", "npm:1.97.1"],\
+          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -4705,6 +4729,27 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["prettier", [\
+      ["npm:3.7.4", {\
+        "packageLocation": "./.yarn/unplugged/prettier-npm-3.7.4-78f94d4194/node_modules/prettier/",\
+        "packageDependencies": [\
+          ["prettier", "npm:3.7.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["prettier-plugin-astro", [\
+      ["npm:0.14.1", {\
+        "packageLocation": "../../.yarn/berry/cache/prettier-plugin-astro-npm-0.14.1-98e3207b66-10c0.zip/node_modules/prettier-plugin-astro/",\
+        "packageDependencies": [\
+          ["prettier-plugin-astro", "npm:0.14.1"],\
+          ["@astrojs/compiler", "npm:2.13.0"],\
+          ["prettier", "npm:3.7.4"],\
+          ["sass-formatter", "npm:0.7.9"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["prismjs", [\
       ["npm:1.30.0", {\
         "packageLocation": "../../.yarn/berry/cache/prismjs-npm-1.30.0-c3c5ff824c-10c0.zip/node_modules/prismjs/",\
@@ -4781,11 +4826,27 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["ramd", [\
+      ["npm:1.0.1", {\
+        "packageLocation": "../../.yarn/berry/cache/ramd-npm-1.0.1-e0e7478434-10c0.zip/node_modules/ramd/",\
+        "packageDependencies": [\
+          ["ramd", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["ramda", [\
       ["npm:0.26.1", {\
         "packageLocation": "../../.yarn/berry/cache/ramda-npm-0.26.1-2050f67102-10c0.zip/node_modules/ramda/",\
         "packageDependencies": [\
           ["ramda", "npm:0.26.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:0.32.0", {\
+        "packageLocation": "../../.yarn/berry/cache/ramda-npm-0.32.0-516282d3a2-10c0.zip/node_modules/ramda/",\
+        "packageDependencies": [\
+          ["ramda", "npm:0.32.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5082,6 +5143,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["s.color", [\
+      ["npm:0.0.15", {\
+        "packageLocation": "../../.yarn/berry/cache/s.color-npm-0.0.15-13058a3420-10c0.zip/node_modules/s.color/",\
+        "packageDependencies": [\
+          ["s.color", "npm:0.0.15"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["safer-buffer", [\
       ["npm:2.1.2", {\
         "packageLocation": "../../.yarn/berry/cache/safer-buffer-npm-2.1.2-8d5c0b705e-10c0.zip/node_modules/safer-buffer/",\
@@ -5299,6 +5369,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/unplugged/sass-embedded-win32-x64-npm-1.97.1-c94cfc229b/node_modules/sass-embedded-win32-x64/",\
         "packageDependencies": [\
           ["sass-embedded-win32-x64", "npm:1.97.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-formatter", [\
+      ["npm:0.7.9", {\
+        "packageLocation": "../../.yarn/berry/cache/sass-formatter-npm-0.7.9-f710063517-10c0.zip/node_modules/sass-formatter/",\
+        "packageDependencies": [\
+          ["sass-formatter", "npm:0.7.9"],\
+          ["suf-log", "npm:2.5.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5531,6 +5611,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["suf-log", [\
+      ["npm:2.5.3", {\
+        "packageLocation": "../../.yarn/berry/cache/suf-log-npm-2.5.3-214fc4da95-10c0.zip/node_modules/suf-log/",\
+        "packageDependencies": [\
+          ["suf-log", "npm:2.5.3"],\
+          ["s.color", "npm:0.0.15"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["supports-color", [\
       ["npm:7.2.0", {\
         "packageLocation": "../../.yarn/berry/cache/supports-color-npm-7.2.0-606bfcf7da-10c0.zip/node_modules/supports-color/",\
@@ -5665,6 +5755,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["ts-toolbelt", [\
+      ["npm:9.6.0", {\
+        "packageLocation": "../../.yarn/berry/cache/ts-toolbelt-npm-9.6.0-a95699c8d0-10c0.zip/node_modules/ts-toolbelt/",\
+        "packageDependencies": [\
+          ["ts-toolbelt", "npm:9.6.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["tsconfck", [\
       ["npm:3.1.6", {\
         "packageLocation": "../../.yarn/berry/cache/tsconfck-npm-3.1.6-2dccdb1bd5-10c0.zip/node_modules/tsconfck/",\
@@ -5711,6 +5810,25 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/type-fest-npm-4.41.0-31a6ce52d8-10c0.zip/node_modules/type-fest/",\
         "packageDependencies": [\
           ["type-fest", "npm:4.41.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["types-ramda", [\
+      ["npm:0.31.0", {\
+        "packageLocation": "../../.yarn/berry/cache/types-ramda-npm-0.31.0-80a9562125-10c0.zip/node_modules/types-ramda/",\
+        "packageDependencies": [\
+          ["types-ramda", "npm:0.31.0"],\
+          ["ts-toolbelt", "npm:9.6.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["typescript", [\
+      ["patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5", {\
+        "packageLocation": "../../.yarn/berry/cache/typescript-patch-6fda4d02cf-10c0.zip/node_modules/typescript/",\
+        "packageDependencies": [\
+          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
         ],\
         "linkType": "HARD"\
       }]\

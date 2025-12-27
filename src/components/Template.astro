@@ -1,0 +1,51 @@
+---
+import blem from 'blem'
+const bem = blem('Template')
+---
+
+<section id="template" class={bem('')}>
+  <h2 className={bem('title')}>Dear Dad</h2>
+    <textarea class={bem('body')} />
+  <button type="submit" class={bem('button', 'save')}>Save</button>
+</section>
+
+<script>
+(async () => {
+    const url = new URL(window.location.toString())
+    const lookup = (eee = '', mmm = []) => {
+      const xm = (Array.isArray(mmm) && mmm[0] ? '--' + mmm[0] : !Array.isArray(mmm) && mmm ? '--' + mmm : '')
+      return document.querySelector(`.Template__${eee}${xm }`)
+    }
+    function updateLocation() {
+      const bod = lookup('body')
+      const msg = bod?.value ?? url.searchParams.get('msg')
+      const qs = new URLSearchParams([['msg', msg]])
+      const updated = url.origin + url.pathname + '?' + qs
+      window.location.search = qs
+    }
+    window.onload = () => {
+      try {
+        const params = url.searchParams
+        const message = params.get('msg')
+        const to = params.get('to')
+        const msgEl = lookup('body')
+        if (msgEl) {
+          if (message) {
+            msgEl.value = message
+          }
+        }
+        const btn = lookup('button', 'save')
+        if (btn) {
+          btn.addEventListener(
+            'click', (e) => {
+              e.preventDefault() 
+              updateLocation()
+            }
+          )
+        }
+      } catch (e) {
+        console.warn(e.toString())
+      }
+    }
+  })()
+</script>

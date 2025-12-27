@@ -1,22 +1,21 @@
 ---
 import blem from 'blem'
-import "./Home.scss"
-const bem = blem('Base')
+import './Home.scss'
+
+const bem = blem('Home')
 ---
 
-<div id="container" class={bem('')}>
+<div
+  id="container"
+  class={bem('')}
+>
   <main class={bem('main')}>
-		<section id="hero">
-      <h1 class={bem('hero-title')}>
-        My Dad Needs Therapy
-      </h1>
-      <h2 class={bem('hero-subtitle')}>
-        Maybe yours does too!
-      </h2>
-      <section id="template" class={bem('template')} contentEditable="plaintext-only" >
-        <h2 className={bem('template-title')}>Dear Dad</h2>
-        <textarea class={bem('template-body')}/>	
-			</section>
-		</section>
-	</main>
+    <h1 class={bem('hero-title')}>
+      My Dad Needs Therapy
+    </h1>
+    <h2 class={bem('hero-subtitle')}>
+      Maybe yours does too!
+    </h2>
+    <slot />
+  </main>
 </div>
