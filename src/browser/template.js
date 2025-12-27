@@ -8,24 +8,21 @@ window.onload = () => {
       try {
         const bod = lookup('body')
         const to = lookup('title')
-        console.log('bod', bod, 'to', to)
         const raw = to?.textContent ?? 'Dear Dad'
         const hasSpace = raw.indexOf(' ') > -1
-        console.log('RAW', raw, 'HAS', hasSpace)
+        const space = raw.lastIndexOf(' ')
         const [
           _greeting = url.searchParams('greeting'),
           _x = url.searchParams.get('to'),
         ] = hasSpace
           ? [
-              raw.slice(0, raw.lastIndexOf(' ')),
-              raw.slice(raw.lastIndexOf(' ') + 1),
+              raw.slice(0, space),
+              raw.slice(space + 1),
             ]
           : ['', raw]
-        console.log('<><>', _greeting, '<!<!<!', _x)
-        const msg = bod?.value ?? url.searchParams.get('msg')
-        const qs = new URLSearchParams([['msg', msg], ['greeting', _greeting], ['to', _x]])
-        const updated = url.origin + url.pathname + '?' + qs
-        console.log('UPDATED!', updated)
+        const message = bod?.value ?? url.searchParams.get('message')
+        const qs = new URLSearchParams([['message', message], ['greeting', _greeting], ['to', _x]])
+        // const updated = url.origin + url.pathname + '?' + qs
         window.location.search = qs
       }
       catch (e) {
@@ -34,7 +31,7 @@ window.onload = () => {
     }
     const url = new URL(window.location.toString())
     const params = url.searchParams
-    const message = params.get('msg') || 'You need therapy'
+    const message = params.get('message') || 'You need therapy'
     const greeting = params.get('greeting') || ''
     const to = params.get('to') || 'Dad'
     const $msg = lookup('body')
@@ -47,8 +44,8 @@ window.onload = () => {
     if ($to && to) {
       $to.textContent = `${greeting ? greeting + ' ' : ''}${to}`
     }
-    const btn = lookup('button', 'save')
-    if (btn) {
+    const $btn = lookup('button', 'save')
+    if ($btn) {
       btn.addEventListener(
         'click', (e) => {
           e.preventDefault()
