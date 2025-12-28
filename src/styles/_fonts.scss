@@ -2,6 +2,7 @@
   font-family: $family, sans-serif;
   font-weight: $weight;
   font-style: $style;
+
   @if $optical {
     font-optical-sizing: auto;
   }
@@ -10,10 +11,12 @@
 .fontMolengo {
   @include font('Molengo')
 }
+
 .fontJosefin {
   @include font("Josefin Sans", 600, normal, true)
   
 }
+
 .fontQuestrial {
   @include font("Questrial", 400, normal, true)
   

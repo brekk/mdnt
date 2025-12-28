@@ -46,6 +46,7 @@ const RAW_RUNTIME_STATE =
           ["sass-embedded", "npm:1.97.1"],\
           ["stylelint", "npm:16.26.1"],\
           ["stylelint-config-standard", "virtual:951eef86dac0e95708dda18a354c5b2810f848987c4f7452a61c72728fdc0fed385ff3cf6bdf9bcab9a47fcb271bc487736a0e7de1f6d275c6e872a9e758cb86#npm:39.0.1"],\
+          ["stylelint-scss", "virtual:951eef86dac0e95708dda18a354c5b2810f848987c4f7452a61c72728fdc0fed385ff3cf6bdf9bcab9a47fcb271bc487736a0e7de1f6d275c6e872a9e758cb86#npm:6.13.0"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
         ],\
         "linkType": "SOFT"\
@@ -4472,6 +4473,13 @@ const RAW_RUNTIME_STATE =
           ["mdn-data", "npm:2.12.2"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.25.0", {\
+        "packageLocation": "../../.yarn/berry/cache/mdn-data-npm-2.25.0-38832cf897-10c0.zip/node_modules/mdn-data/",\
+        "packageDependencies": [\
+          ["mdn-data", "npm:2.25.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["mdnt", [\
@@ -4498,6 +4506,7 @@ const RAW_RUNTIME_STATE =
           ["sass-embedded", "npm:1.97.1"],\
           ["stylelint", "npm:16.26.1"],\
           ["stylelint-config-standard", "virtual:951eef86dac0e95708dda18a354c5b2810f848987c4f7452a61c72728fdc0fed385ff3cf6bdf9bcab9a47fcb271bc487736a0e7de1f6d275c6e872a9e758cb86#npm:39.0.1"],\
+          ["stylelint-scss", "virtual:951eef86dac0e95708dda18a354c5b2810f848987c4f7452a61c72728fdc0fed385ff3cf6bdf9bcab9a47fcb271bc487736a0e7de1f6d275c6e872a9e758cb86#npm:6.13.0"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
         ],\
         "linkType": "SOFT"\
@@ -5399,6 +5408,15 @@ const RAW_RUNTIME_STATE =
           ["nanoid", "npm:3.3.11"],\
           ["picocolors", "npm:1.1.1"],\
           ["source-map-js", "npm:1.2.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["postcss-media-query-parser", [\
+      ["npm:0.2.3", {\
+        "packageLocation": "../../.yarn/berry/cache/postcss-media-query-parser-npm-0.2.3-7c1ee973b6-10c0.zip/node_modules/postcss-media-query-parser/",\
+        "packageDependencies": [\
+          ["postcss-media-query-parser", "npm:0.2.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6486,6 +6504,36 @@ const RAW_RUNTIME_STATE =
           ["@types/stylelint", null],\
           ["stylelint", "npm:16.26.1"],\
           ["stylelint-config-recommended", "virtual:58b843e968ab4a586ad6cb7ff1d134a9096c8d1d9e0d34102bef92c55fc33cd9870d55de376064550f6cbe203cecb4569b89917b837002d4b8385b6be2c0136b#npm:17.0.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/stylelint",\
+          "stylelint"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["stylelint-scss", [\
+      ["npm:6.13.0", {\
+        "packageLocation": "../../.yarn/berry/cache/stylelint-scss-npm-6.13.0-075211f066-10c0.zip/node_modules/stylelint-scss/",\
+        "packageDependencies": [\
+          ["stylelint-scss", "npm:6.13.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:951eef86dac0e95708dda18a354c5b2810f848987c4f7452a61c72728fdc0fed385ff3cf6bdf9bcab9a47fcb271bc487736a0e7de1f6d275c6e872a9e758cb86#npm:6.13.0", {\
+        "packageLocation": "./.yarn/__virtual__/stylelint-scss-virtual-737a14eaca/3/.yarn/berry/cache/stylelint-scss-npm-6.13.0-075211f066-10c0.zip/node_modules/stylelint-scss/",\
+        "packageDependencies": [\
+          ["stylelint-scss", "virtual:951eef86dac0e95708dda18a354c5b2810f848987c4f7452a61c72728fdc0fed385ff3cf6bdf9bcab9a47fcb271bc487736a0e7de1f6d275c6e872a9e758cb86#npm:6.13.0"],\
+          ["@types/stylelint", null],\
+          ["css-tree", "npm:3.1.0"],\
+          ["is-plain-object", "npm:5.0.0"],\
+          ["known-css-properties", "npm:0.37.0"],\
+          ["mdn-data", "npm:2.25.0"],\
+          ["postcss-media-query-parser", "npm:0.2.3"],\
+          ["postcss-resolve-nested-selector", "npm:0.1.6"],\
+          ["postcss-selector-parser", "npm:7.1.1"],\
+          ["postcss-value-parser", "npm:4.2.0"],\
+          ["stylelint", "npm:16.26.1"]\
         ],\
         "packagePeers": [\
           "@types/stylelint",\
@@ -13797,7 +13845,7 @@ function arg(
 		}
 
 		if (wholeArg.length > 1 && wholeArg[0] === '-') {
-			 
+			/* eslint-disable operator-linebreak */
 			const separatedArguments =
 				wholeArg[1] === '-' || wholeArg.length === 2
 					? [wholeArg]
@@ -13848,7 +13896,7 @@ function arg(
 							!(
 								argv[i + 1].match(/^-?\d*(\.(?=\d))?\d*$/) &&
 								(type === Number ||
-									 
+									// eslint-disable-next-line no-undef
 									(typeof BigInt !== 'undefined' && type === BigInt))
 							))
 					) {

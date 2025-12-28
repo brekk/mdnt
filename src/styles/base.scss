@@ -1,4 +1,4 @@
-@import "fonts";
+@import url("fonts");
 
 html,
 body {
@@ -9,13 +9,17 @@ body {
   background: aliceblue;
   color: #121212;
   box-sizing: border-box;
+
   @extend .fontMolengo;
 }
+
 h1 {
   // @extend .fontJosefin;
   @extend .fontQuestrial;
+
   font-weight: 700;
 }
+
 h2,
 h3,
 h4,

@@ -2,6 +2,8 @@
 import blem from 'blem'
 import '#/components/Page.scss'
 import Footer from '#/components/Footer.astro'
+import Guide from '#/components/Guide.astro'
+import GuideWrapper from '#/components/GuideView.astro'
 
 const bem = blem('Page')
 ---
@@ -9,6 +11,14 @@ const bem = blem('Page')
 <div
   class={bem('')}
 >
+  <GuideWrapper>
+    <Guide offset="50%" description="v 50%" />
+    <Guide offset="50%" description="h 50%" vertical={false} />
+    <Guide offset="1rem" description="v 1rem" />
+    <Guide offset="1rem" description="h 1rem" vertical={false} />
+    <Guide offset="-1rem" description="v -1rem" />
+    <Guide offset="-1rem" description="h -1rem" vertical={false} />
+  </GuideWrapper>
   <header class={bem('header')}>
     <h1 class={bem('hero-title')}>
       My Dad Needs Therapy

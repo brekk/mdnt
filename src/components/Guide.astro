@@ -1,0 +1,33 @@
+---
+const guide = () => `
+  position: absolute;
+  background: transparent;
+  border: none;
+`
+const verticalGuide = (offset = '0', style = '1px dotted lime') => `
+  ${guide()}
+  ${offset.startsWith('-') ? 'right' : 'left'}: ${offset.replace(/^\-/, '')};
+  height: 100vh;
+  width: 0;
+  border-right: ${style};
+`
+
+const horizontalGuide = (offset = '0', style = '1px dotted lime') => `
+  ${guide()}
+  ${offset.startsWith('-') ? 'top' : 'bottom'}: ${offset.replace(/^\-/, '')};
+  height: 0;
+  width: 100vw;
+  border-top: ${style};
+`
+
+const {
+  vertical = true,
+  description: desc = '',
+  offset = '0',
+  style = vertical ? verticalGuide(offset) : horizontalGuide(offset),
+} = Astro.props
+import blem from 'blem'
+const bem = blem('Guide')
+---
+
+<div class={bem('', vertical ? 'vertical' : 'horizontal')} data-description={desc} title={desc} style={style} />
