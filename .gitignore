@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# yarn yarn yarn yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*

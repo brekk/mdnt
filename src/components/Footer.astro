@@ -1,0 +1,27 @@
+---
+const { bem } = Astro.props
+---
+
+<footer class={bem('footer')}>
+  <h4 class={bem('footer-title')}>The Details</h4>
+  <p class={bem('footer-text')}>
+    <strong>We never track any of your data whatsoever.</strong>
+    There are some
+    {' '}
+    <a href="/?message=Example+message&to=$person&greeting=Hey">query strings</a>
+    {' '}
+    which pre-load the content, but we don't retain any details of your interactions beyond what your browser does by default.
+  </p>
+  <p class={bem('footer-text', 'really-though')}>
+    This site
+    {' '}
+    <em>might</em>
+    {' '}
+    be satire. It was not created by anyone who is an accredited medical nor health professional. Use at your own risk and legal counsel. It was built with ❤️ and some frustration / exhaustion. May you find it useful.
+  </p>
+  <small>
+    <strong>Fuck AI.</strong>
+    {' '}
+    Not for any specific reason related to anything on this site, just in general. It is a scourge.
+  </small>
+</footer>

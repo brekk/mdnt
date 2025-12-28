@@ -32,7 +32,7 @@ window.onload = () => {
     const url = new URL(window.location.toString())
     const params = url.searchParams
     const message = params.get('message') || 'You need therapy'
-    const greeting = params.get('greeting') || ''
+    const greeting = params.get('greeting') || 'Dear'
     const to = params.get('to') || 'Dad'
     const $msg = lookup('body')
     if ($msg) {
@@ -46,7 +46,7 @@ window.onload = () => {
     }
     const $btn = lookup('button', 'save')
     if ($btn) {
-      btn.addEventListener(
+      $btn.addEventListener(
         'click', (e) => {
           e.preventDefault()
           updateLocation()

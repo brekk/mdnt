@@ -4,13 +4,31 @@ const bem = blem('Template')
 import '#/components/Template.scss'
 ---
 
-<section id="template" class={bem('')}>
-  <aside class={bem('meta', 'description')}>A useful and editable (and printable) template</aside>
-  <h2 className={bem('title', 'uncontrolled')} contentEditable="plaintext-only">Dear Dad</h2>
-  <textarea class={bem('body', 'uncontrolled')} />
-  <button type="submit" class={bem('button', 'save')}>Save</button>
+<section
+  id="template"
+  class={bem('')}
+>
+
+  <h2
+    class={bem('title', 'uncontrolled')}
+    contentEditable="plaintext-only"
+  >
+    Dear Dad
+  </h2>
+  <div class={bem('form')}>
+    <textarea class={bem('body', 'uncontrolled')} />
+    <button type="submit" class={bem('button', 'save')}>Get a URL to share</button>
+  </div>
+  <aside class={bem('meta', 'description')}>
+    <strong class={bem('info', 'primary')}>
+      An editable (and printable) (and hopefully useful) template
+    </strong>
+    <span class={bem('info', 'secondary')}>
+      You can print to a PDF too!
+    </span>
+  </aside>
 </section>
 
 <!-- script src="../vendor/spinneret.js" /-->
-<script src="../browser/helpers.js" />
-<script src="../browser/template.js" />
+<script src="#/browser/helpers.js" />
+<script src="#/browser/template.js" />

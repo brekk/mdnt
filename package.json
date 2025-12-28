@@ -3,6 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "lint": "eslint --fix .",
+    "lint-start": "eslint_d start",
+    "lint-server": "eslint_d",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -20,12 +23,17 @@
     "@stylistic/eslint-plugin": "^5.6.1",
     "@stylistic/eslint-plugin-js": "^4.4.1",
     "@types/ramda": "^0",
+    "@typescript-eslint/parser": "^8.50.1",
+    "astro-eslint-parser": "^1.2.2",
     "eslint": "^9.39.2",
     "eslint-plugin-astro": "^1.5.0",
+    "eslint_d": "^14.3.0",
     "globals": "^16.5.0",
     "prettier": "^3.7.4",
     "prettier-plugin-astro": "^0.14.1",
     "sass-embedded": "^1.97.1",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^39.0.1",
     "typescript": "^5.9.3"
   }
 }

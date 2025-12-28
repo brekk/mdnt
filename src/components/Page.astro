@@ -1,0 +1,26 @@
+---
+import blem from 'blem'
+import '#/components/Page.scss'
+import Footer from '#/components/Footer.astro'
+
+const bem = blem('Page')
+---
+
+<div
+  class={bem('')}
+>
+  <header class={bem('header')}>
+    <h1 class={bem('hero-title')}>
+      My Dad Needs Therapy
+    </h1>
+    <h2 class={bem('hero-subtitle')}>
+      Maybe yours does too!
+    </h2>
+  </header>
+  <main class={bem('main')}>
+    <div class={bem('content-wrapper')}>
+      <slot />
+    </div>
+  </main>
+  <Footer bem={bem} />
+</div>
