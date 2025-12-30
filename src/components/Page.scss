@@ -1,18 +1,20 @@
 .Page {
-  padding: 0.5rem;
-  margin: 0.25rem;
+  padding: 1rem;
   width: calc(100% - 2rem);
-
+  &__footer-title {
+    font-weight: bolder;
+  }
   &__footer {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     border-top: 1px solid blue;
     font-size: 0.75rem;
     margin: 2rem auto 0;
+    
 
     p, small { 
       display: inline-block;
-    max-width: 60vw;
-    margin: 0.5rem auto;
+      // max-width: 40rem;
+      margin: 0.5rem auto;
     }
   }
 }

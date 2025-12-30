@@ -17,12 +17,16 @@ import '#/components/Template.scss'
   </h2>
   <div class={bem('form')}>
     <textarea class={bem('body', 'uncontrolled')} />
-    <button type="submit" class={bem('button', 'save')}>Get a URL to share</button>
+    <div class={bem('control-panel', 'primary')}>
+
+      <button type="submit" class={bem('button', 'save')}>Get a URL to share</button>
+    </div>
   </div>
   <aside class={bem('meta', 'description')}>
     <strong class={bem('info', 'primary')}>
       An editable (and printable) (and hopefully useful) template
     </strong>
+
     <span class={bem('info', 'secondary')}>
       You can print to a PDF too!
     </span>

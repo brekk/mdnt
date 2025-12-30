@@ -1,8 +1,9 @@
+@import "../styles/button.scss";
+
 .Template {
-  border-top: 1px dashed blue;
+  border: 1px dashed blue;
   padding: 1rem;
   width: calc(100% - 2rem);
-  max-width: 50rem;
   margin: 0 auto;
 
   &__body {
@@ -17,15 +18,20 @@
 
   &__form {
     padding: 0;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
   }
-
+&__control-panel {
+    border: 1px dotted yellow;
+    margin: 1rem 0 1rem;
+    padding: 0;
+    width: 100%;
+    min-height: 1rem;
+}
   &__button--save {
-    margin-top: 1rem;
+    @extend %button;
   }
 
   &__meta--description {
